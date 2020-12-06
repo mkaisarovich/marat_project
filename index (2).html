@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>project</title>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnMj8Xc5_jA0tqVHCoFHCk-2sHt4imItA&callback=initMap&libraries=&v=weekly"
+      defer 
+      ></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="style.css">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+<body onload="load()">
+
+	<div class="nav">
+		<label for="toggle">&#9776;</label>
+	</div>
+
+ 
+	<div class="head">
+
+		<div class="icons">
+			<div class="bt1">
+            	<img id="" onclick="popup()" src="https://img2.freepng.ru/20180409/wew/kisspng-font-awesome-computer-icons-symbol-sign-up-button-5acb839333e991.5049139415232869312126.jpg" height="30" width="30" >
+        	</div>
+		</div>
+		
+	</div>
+	
+	<input type="checkbox" name="" id="toggle">
+
+
+	<div class="header">
+		<div id="woman" onmouseover="big(this)" onmouseout="small(this)">Мужчинам</div>
+		<div id="man" onmouseover="big(this)" onmouseout="small(this)">Женщинам</div>
+		<div id="kids" onmouseover="big(this)" onmouseout="small(this)">Детям</div>
+		<div id="trend" onmouseover="big(this)" onmouseout="small(this)">Тренды</div>
+	</div>
+
+
+	<div class="obuv">
+		<img src="https://www.respect-shoes.kz/media/Update/image_jpeg/November_2020/w-1920/95F2eB9zK5x.jpg" width="100%">
+	</div>
+
+	  <div class="popup">
+        <div class="popup-content">
+            <div class="iden">
+             	<h3 id="h21">ВХОД</h3>
+            	<img id="close" onclick="close_popup()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/OOjs_UI_icon_close.svg/1200px-OOjs_UI_icon_close.svg.png" width="10%">
+            </div>
+            <div class="akk">
+
+            	<input id="username" type="text" name="username" placeholder="Логин">
+            	<input type="password" id="pass" name="pass" placeholder="Пароль">
+             	<p> <ins> Забыли пароль? </ins></p>
+            	<button id="btn1" class="btn btn-dark">Войти</button>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <div class="top555">
+    	<h2>Тренды 2020года</h2>
+    </div>
+
+	<div class="top5">
+		<h2 id="id2">Тренды 2020года</h2>
+	</div>
+	
+
+
+	<div class="divtop5">
+			<div class="card">
+	  			<img class="card-img-top" src="https://m.buro247.ru/images/2020/09/1599816052327995.jpg" alt="Card image" width="250" height="300"  >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Adidas</h4>
+	   				<p class="card-title">Мужские</p>
+				<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://artbasket.store/wordpress/wp-content/uploads/2018/10/m2k-tekno-Pink-Foam-1-600x750.jpg"  width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Nike</h4>
+	   				<p class="card-title">Женские</p>
+					<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://images.ua.prom.st/1287053528_detskie-krossovki-reebok.jpg"  width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Reebook</h4>
+	   				<p class="card-title">Детям</p>
+					<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://rskrf.ru/upload/iblock/061/0615da47485dcfef8c9e2ec93eb9a6cb.jpg" width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Туфли</h4>
+	   				<p class="card-title">Мужские</p>
+					<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			<div class="card">
+	  			<img class="card-img-top" src="https://images.ua.prom.st/1687710042_w640_h640_tufli-zhenskie-aiformaria.jpg"  width="250 " height="300" >
+	  			<div class="card-body">
+	   				<h4 class="card-title">Туфли</h4>
+	   				<p class="card-title">Женские</p>
+				<button class="btn btn-outline-dark ">Купить</button>
+	  			</div>
+			</div>
+
+			
+
+	</div>
+	<div class="maps">
+				<div id="map"></div>
+			<div id="titleMap">
+				<h1 id="maph1">Наше местоположение</h1>
+			</div>
+			
+			</div>
+	<script type="text/javascript " src="script.js"></script>
+	<script>
+		function initMap() {
+      		var options={
+      		center:{ lat:43.238949, lng:76.889709},
+			  zoom:11,
+			  styles: [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#523735"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#c9b2a6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#dcd2be"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#ae9e90"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#93817c"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#a5b076"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#447530"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#fdfcf8"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f8c967"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#e9bc62"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e98d58"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#db8555"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#806b63"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#8f7d77"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#b9d3c2"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#92998d"
+      }
+    ]
+  }
+]
+
+			}      	
+
+        var myMap = new google.maps.Map(document.getElementById("map"),options);
+
+      	var icon={
+        	url: "data:image/png;base64,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",
+        	scaledSize:new google.maps.Size(50,50),
+        	origin: new google.maps.Point(0,0),
+        	anchor: new google.maps.Point(0,0)
+      	};
+      	var marker = new google.maps.Marker({
+        	position: {lat: 43.24244373247312, lng: 76.92343866657777},
+        	map:myMap,
+        	icon:icon
+		  });
+		  var info = new google.maps.InfoWindow({
+    content: '<h3>Добро пожаловать!</h3><p>Магазин обуви</p>'
+  });
+
+  marker.addListener("click", function(){
+    info.open(myMap, marker);
+  });
+
+    }
+	</script>
+</body>
+</body>
+</html>
